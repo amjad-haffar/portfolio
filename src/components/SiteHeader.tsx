@@ -2,7 +2,6 @@ import { profile } from '../content';
 
 const navigation = [
   ['About', '#about'],
-  ['Experience', '#experience'],
   ['Projects', '#projects'],
   ['Contact', '#contact'],
 ];

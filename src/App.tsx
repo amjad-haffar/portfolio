@@ -4,7 +4,7 @@ import { Hero } from './sections/Hero';
 import { About } from './sections/About';
 import { Experience } from './sections/Experience';
 import { Education } from './sections/Education';
-import { Projects } from './sections/Projects';
+import { Projects } from './sections/projects/Projects';
 import { Contact } from './sections/Contact';
 
 export default function App() {
@@ -12,16 +12,13 @@ export default function App() {
     <>
       <a className="skip-link" href="#main">Skip to content</a>
       <SiteHeader />
-
       <main id="main" className="wrap">
         <Hero />
         <About />
-        <Experience />
-        <Education />
         <Projects />
+        <Education />
         <Contact />
       </main>
-
       <SiteFooter />
     </>
   );

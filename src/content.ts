@@ -1,31 +1,81 @@
+
 export const profile = {
-  name: 'Alex Morgan',
-  initials: 'AM',
-  role: 'Frontend developer',
-  headline: 'I build thoughtful things for the web.',
-  intro: 'I’m Alex Morgan, a frontend developer who cares about clear design, accessible interfaces, and code that’s easy to work with.',
-  photo: './portrait.png',
-  location: 'London, UK',
-  about: [
-    'I enjoy taking an idea from a rough sketch to a working interface. I focus on making the details feel right, from how a layout adapts on a small screen to how a form explains an error.',
-    'I like working with designers and engineers early, when we can still make the simplest choice for the people who’ll use the product.',
+  name: 'Amjad Alhaffar',
+  initials: 'AA',
+  role: 'Software Engineer',
+  headline: 'Making Art, from Guitar Strings to Lines of Code.',
+  intro:
+    "MSc in Artificial Intelligence, Software Engineer with three years of experience and an . I love turning ideas into working software, and finding creative ways to make a positive impact. When I'm not coding, you'll probably find me playing guitar.",
+  photo: './myPhoto.jpg',
+  location: 'Sheffield, UK',
+  skills: [
+    'Flutter',
+    'React ',
+    'React Native',
+    'Android',
+    'Node.js ',
+    'Firebase',
+    'Database',
+    'Machine Learning',
+    'Explainable AI',    
+    'LLM',
   ],
-  skills: ['React', 'TypeScript', 'CSS', 'Accessibility', 'Design systems'],
-  email: 'alex@example.com',
   links: [
-    { label: 'GitHub', url: 'https://github.com/' },
-    { label: 'LinkedIn', url: 'https://www.linkedin.com/' },
+    {      label: 'Linkedin',
+      url: 'https://www.linkedin.com/in/amjadalhaffarsyr/',},
+    {
+      label: 'GitHub',
+      url: 'https://github.com/amjad-haffar',
+    },
+    {label: 'Instagram',
+      url: 'https://www.instagram.com/amjad.haffar.mp3',
+    }
+    
   ],
 };
 
 export const experience = [
-  { role: 'Frontend Developer', company: 'Northstar Studio', dates: '2023 — Present', description: 'Build reusable components and responsive product flows for a small design and engineering team.' },
-  { role: 'Junior Web Developer', company: 'Studio Field', dates: '2021 — 2023', description: 'Built and maintained client websites with a focus on keyboard navigation and mobile layouts.' },
+  {
+    role: 'Flutter Developer',
+    company: 'E-Solutions Group',
+    dates: 'Oct 2023 — Aug 2025',
+    description:
+      'Developed and maintained five production mobile applications using Flutter and Dart. Took ownership of projects built from scratch and existing applications, integrated REST APIs, resolved bugs, and improved code maintainability. Also worked with native Android Java code.',
+  },
+  {
+    role: 'Freelance Mobile App Developer & Designer',
+    company: 'Freelance',
+    dates: 'Jul 2022 — Oct 2023',
+    description:
+      'Developed two cross-platform mobile applications using Flutter and Firebase, integrating authentication, APIs, and cloud services.',
+  },
+  {
+    role: 'Mobile App Developer',
+    company: 'B-Wire',
+    dates: 'Nov 2021 — May 2022',
+    description:
+      'Worked on mobile application development using Flutter and React Native with JavaScript.',
+  },
+  {
+    role: 'Volunteer Software Developer',
+    company: 'Syrian Astronomical Association',
+    dates: 'Jan 2024 — Aug 2025',
+    description:
+      'Developed a Flutter desktop application for telescope automation and integrated a Python Flask API for astronomical data and calculations.',
+  },
 ];
 
 export const credentials = [
-  { title: 'BSc Computer Science', issuer: 'Example University', date: '2021' },
-  { title: 'Responsive Web Design', issuer: 'freeCodeCamp certification', date: '2022' },
+  {
+    title: 'MSc Artificial Intelligence — Distinction',
+    issuer: 'Sheffield Hallam University',
+    date: '2026',
+  },
+  {
+    title: 'BSc Software Engineering',
+    issuer: 'Yarmouk Private University',
+    date: '2022',
+  },
 ];
 
 type Project = {
@@ -37,6 +87,19 @@ type Project = {
 };
 
 export const projects: Project[] = [
-  { name: 'Daymark', preview: 'planner', description: 'A weekly planner that puts tasks and calendar blocks side by side so you can see what fits.', stack: ['React', 'TypeScript'] },
-  { name: 'Margin Notes', preview: 'library', description: 'A personal reading log for tracking books, saving quotes, and revisiting notes.', stack: ['React', 'CSS'] },
+  {
+    name: 'Explainable AI Platform for Medical Decision Support',
+    preview: 'planner',
+    description:
+      'An end-to-end AI prototype combining machine learning, deep learning, SHAP, Grad-CAM, and LLM-generated explanations to make medical model predictions more understandable.',
+    stack: ['Python', 'Streamlit', 'Machine Learning', 'SHAP', 'Grad-CAM', 'LLMs'],
+  },
+  {
+    name: 'Tyria — Tourism Mobile Application',
+    preview: 'library',
+    description:
+      'A mobile tourism application developed as my graduation project, featuring user authentication, destination discovery, interactive maps, and REST API integration.',
+    stack: ['Flutter', 'Dart', 'Mapbox', 'GetX', 'REST APIs'],
+    url: 'https://github.com/amjad-haffar/selfdrive/',
+  },
 ];
