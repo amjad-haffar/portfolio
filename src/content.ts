@@ -5,8 +5,15 @@ export const profile = {
   role: 'Software Engineer',
   headline: 'Making Art, from Guitar Strings to Lines of Code.',
   intro:
-    "MSc in Artificial Intelligence, Software Engineer with three years of experience and an . I love turning ideas into working software, and finding creative ways to make a positive impact. When I'm not coding, you'll probably find me playing guitar.",
-  photo: './myPhoto.jpg',
+    "MSc in Artificial Intelligence, Software Engineer with three years of experience. I love turning ideas into working software, and finding creative ways to make a positive impact. When I'm not coding, you'll probably find me playing guitar.",
+  photos: ['./myPhoto.jpg',
+    './me4.jpeg',
+    './me5.jpeg',
+    './me3.jpeg',
+    './me2.jpeg',
+    './me.jpeg',
+    
+  ],
   location: 'Sheffield, UK',
   skills: [
     'Flutter',
