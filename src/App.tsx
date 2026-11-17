@@ -1,7 +1,7 @@
 import { SiteHeader } from './components/SiteHeader';
 import { SiteFooter } from './components/SiteFooter';
 import { Hero } from './sections/Hero';
-import { About } from './sections/About';
+import { Skills } from './sections/About';
 import { Experience } from './sections/Experience';
 import { Education } from './sections/Education';
 import { Projects } from './sections/projects/Projects';
@@ -14,8 +14,8 @@ export default function App() {
       <SiteHeader />
       <main id="main" className="wrap">
         <Hero />
-        <About />
         <Projects />
+        <Skills />
         <Education />
         <Contact />
       </main>
