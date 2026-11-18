@@ -1,7 +1,7 @@
 
 import './ProjectStory.css';
 
-import { projects } from './data';
+import { otherProjects, projects } from './data';
 import { ProjectStory } from './projectStory';
 
 
@@ -18,6 +18,17 @@ export function Projects() {
 
       <div className="projects-list">
         {projects.map((project) => (
+          <ProjectStory
+            key={project.name}
+            project={project}
+          />
+        ))}
+      </div>
+      <h2>Personal & Academic Projects</h2>
+      <h2>Source Code Available 👀</h2>
+
+      <div className="projects-list">
+        {otherProjects.map(project => (
           <ProjectStory
             key={project.name}
             project={project}

@@ -26,7 +26,7 @@ export function ProjectStory({ project }: { project: Project }) {
   }
 
   return (
-    <article className="project-story">
+    <article className={`project-story ${project.screenshotLayout ?? 'mobile'}`}>
       <header className="project-story-header">
         <h3>{project.name}</h3>
         <p className="project-story-tagline">
@@ -82,6 +82,13 @@ export function ProjectStory({ project }: { project: Project }) {
           <a href={project.url} target="_blank" rel="noopener noreferrer">
             View project ↗
           </a>
+          
+        )}
+        {project.sourceCode && (
+          <a href={project.sourceCode} target="_blank" rel="noopener noreferrer">
+            Source Code ↗
+          </a>
+          
         )}
         </div>
       </div>

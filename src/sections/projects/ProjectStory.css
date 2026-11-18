@@ -24,7 +24,8 @@
 .project-story-tagline {
   margin: 0;
   font-size: 1.1rem;
-  opacity: 0.75;
+  color: #600a88;
+  /* opacity: 0.75; */
 }
 
 .project-story-content {
@@ -82,7 +83,7 @@
 .project-story-section h4 {
   margin: 0 0 0.1rem;
   font-size: 1.2rem;
-  color: 600a88;
+  color: #600a88;
   font-family: "Arial";
   opacity: 0.95;
 }
@@ -126,4 +127,15 @@
   .portrait img {
     transition: none;
   }
+}
+
+.project-story.desktop .project-story-gallery img {
+  width: 100%;
+  max-width: none;
+  height: 500px;
+  max-height: none;
+  object-fit: contain;
+}
+.project-story.desktop .project-story-content {
+  grid-template-columns: 1fr;
 }
