@@ -1,20 +1,24 @@
+import { Link, NavLink } from 'react-router-dom';
 import { profile } from '../content';
 
 const navigation = [
-  ['About', '#about'],
-  ['Projects', '#projects'],
-  ['Contact', '#contact'],
+  ['Projects', '/#projects'],
+  ['Skills', '/#skills'],
+  ['Education', '/#education'],
+  ['Contact', '/#contact'],
 ];
 
 export function SiteHeader() {
   return (
-    <header className="site-header" id="top">
+    <header className="site-header" id="top" tabIndex={-1}>
       <div className="wrap header-inner">
-        <a className="brand" href="#top"><span className="monogram">{profile.initials}</span>{profile.name}</a>
+        <Link className="brand" to="/"><span className="monogram">{profile.initials}</span>{profile.name}</Link>
         <nav aria-label="Main navigation">
-          {navigation.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
+          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/lately">Life Lately</NavLink>
         </nav>
       </div>
     </header>
   );
 }
+

@@ -2,6 +2,6 @@ import { profile } from '../content';
 
 export function SiteFooter() {
   return (
-    <footer className="wrap footer"><span>{profile.name} · portfolio</span><a href="#top">Back to top ↑</a></footer>
+    <footer className="wrap footer"><span>Designed, developed and excessively overthought by me. 👽</span><a href="#top">Back to top ↑</a></footer>
   );
 }

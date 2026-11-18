@@ -2,7 +2,7 @@ import { credentials } from '../content';
 
 export function Education() {
   return (
-    <section className="section split" id="education" aria-labelledby="education-title">
+    <section className="section split" id="education" tabIndex={-1} aria-labelledby="education-title">
       <h2 id="education-title">Education</h2>
       <div className="entries">
         {credentials.map((item) => (

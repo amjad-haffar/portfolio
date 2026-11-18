@@ -139,3 +139,17 @@
 .project-story.desktop .project-story-content {
   grid-template-columns: 1fr;
 }
+.projects-list > .project-story + .project-story {
+  margin-top: 2rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--line);
+}
+.project-story-gallery {
+  border: 0;
+  background: #f4f0fa;
+}
+
+.project-story-section h4 { font-family: inherit; }
+@media (max-width: 640px) {
+  .project-story.desktop .project-story-gallery img { height: auto; max-height: 360px; }
+}

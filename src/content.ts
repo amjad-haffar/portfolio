@@ -115,3 +115,6 @@ export const projects: Project[] = [
     url: 'https://github.com/amjad-haffar/selfdrive/',
   },
 ];
+let gifts=[
+  'Technology has traditionally helped us overcome limitations. But what happens when those limitations are themselves part of what makes life enjoyable?'
+]

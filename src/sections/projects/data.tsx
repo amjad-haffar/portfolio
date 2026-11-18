@@ -1,5 +1,6 @@
 
 export type Project = {
+  id: string;
   name: string;
   tagline: string;
   screenshots: string[];
@@ -16,6 +17,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'future-gym',
     name: 'Future GYM - 2024',
     tagline:
       'A fitness app that improved my posture and my debugging skills.',
@@ -66,7 +68,8 @@ export const projects: Project[] = [
     ],
   },
   {
-  name: 'Blue BuySale - 2025',
+  id: 'blue-buysale',
+    name: 'Blue BuySale - 2025',
   tagline:
     'A complex marketplace app, led by a harmonised development team',
   screenshots: [
@@ -110,7 +113,8 @@ export const projects: Project[] = [
 ];
 export const otherProjects: Project[] = [
 {
-  name: 'TriMind - 2026',
+  id: 'trimind',
+    name: 'TriMind - 2026',
   category: 'academic',
   screenshotLayout:'desktop',
   tagline: 'knowing what AI predicts is not enough. We need to know why AND in a personalised way.',
@@ -149,7 +153,8 @@ export const otherProjects: Project[] = [
   ],
 },
 {
-  name: 'Tyria - 2022',
+  id: 'tyria',
+    name: 'Tyria - 2022',
   category: 'academic',
   tagline: 'Exploring destinations, one optimised route at a time.',
   screenshots: [

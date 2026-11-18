@@ -10,7 +10,7 @@ export function Hero() {
         <p className="intro">{profile.intro}</p>
         <div className="actions">
           <a className="button primary" href="#projects">View projects <span aria-hidden="true">↓</span></a>
-          <a className="button secondary" href="#contact">Get in touch</a>
+          <a className="button secondary" href="#contact">About Me</a>
         </div>
       </div>
       <ProfilePhoto />

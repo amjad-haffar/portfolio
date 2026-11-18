@@ -2,7 +2,7 @@ import { profile } from '../content';
 
 export function Contact() {
   return (
-    <section className="contact" id="contact" aria-labelledby="contact-title">
+    <section className="contact" id="contact" tabIndex={-1} aria-labelledby="contact-title">
       <div>
         <h2 id="contact-title">Get in touch</h2>
         <p>Want to have a chat? I’d love to hear from you.</p>

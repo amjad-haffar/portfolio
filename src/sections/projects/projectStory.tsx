@@ -26,7 +26,7 @@ export function ProjectStory({ project }: { project: Project }) {
   }
 
   return (
-    <article className={`project-story ${project.screenshotLayout ?? 'mobile'}`}>
+    <article id={project.id} tabIndex={-1} className={`project-story ${project.screenshotLayout ?? 'mobile'}`}>
       <header className="project-story-header">
         <h3>{project.name}</h3>
         <p className="project-story-tagline">
