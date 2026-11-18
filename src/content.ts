@@ -5,7 +5,7 @@ export const profile = {
   role: 'Software Engineer',
   headline: 'Making Art, from Guitar Strings to Lines of Code.',
   intro:
-    "MSc in Artificial Intelligence, Software Engineer with three years of experience. I love turning ideas into working software, and finding creative ways to make a positive impact. When I'm not coding, you'll probably find me playing guitar.",
+    "MSc in Artificial Intelligence, Software Engineer with three years of experience. I use technology to build creative solutions and make a positive impact. When I'm not coding, you'll probably find me playing guitar.",
   photos: ['./myPhoto.jpg',
     './me4.jpeg',
     './me5.jpeg',

@@ -34,14 +34,30 @@ h1 { font-size: clamp(2.9rem, 6.1vw, 5.4rem); line-height: 1.04; letter-spacing:
 .primary:hover { background: #7a25a4; color: white; }
 .secondary { background: white; border: 1px solid var(--line); }
 .profile-card { background: #eeebfb; border: 1px solid #e2ddef; border-radius: 22px; padding: 13px; }
-.portrait { display: grid; place-items: center; aspect-ratio: 1; border-radius: 14px; overflow: hidden; background: #c8c2ee; color: #552f77; font-size: 3.5rem; font-weight: 750; }
-.portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.portrait {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #c8c2ee;
+  color: #552f77;
+  font-size: 3.5rem;
+  font-weight: 750;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; padding: 13px 3px 3px; font-size: .9rem; }
 figcaption span { color: var(--muted); font-size: .82rem; }
 .section { padding-block: 54px; border-top: 1px solid var(--line); }
 .split { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; }
-h2 { font-size: clamp(1.85rem, 4vw, 2.75rem); line-height: 1.08; letter-spacing: -.052em;color: #600a88; }
-h3 { font-size: 1.12rem; letter-spacing: -.025em; }
+h2 { font-size: clamp(1.85rem, 4vw, 2.75rem); line-height: 1.08; letter-spacing: -.052em;color: #4b076a; }
+h3 { font-size: 1.12rem; letter-spacing: -.025em;color:#600a88 }
 .about-copy p, .entry p, .project-info p, .contact p { color: var(--muted); }
 .about-copy p + p { margin-top: 12px; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 18px 0 0; list-style: none; }

@@ -1,6 +1,5 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { profile } from '../content';
-
 
 export function ProfilePhoto() {
   const [unavailable, setUnavailable] = useState(false);
@@ -21,13 +20,20 @@ export function ProfilePhoto() {
         {unavailable ? (
           <span aria-hidden="true">{profile.initials}</span>
         ) : (
-          <img
-            src={profile.photos[index]}
-            alt={`Portrait of ${profile.name}`}
-            width="1024"
-            height="1024"
-            onError={() => setUnavailable(true)}
-          />
+          profile.photos.map((photo, i) => (
+            <img
+              key={photo}
+              src={photo}
+              alt={`Portrait of ${profile.name}`}
+              width="1024"
+              height="1024"
+              className={i === index ? 'active' : ''}
+              aria-hidden={i !== index}
+              onError={() => {
+                if (i === index) setUnavailable(true);
+              }}
+            />
+          ))
         )}
       </div>
 

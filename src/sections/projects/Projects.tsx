@@ -13,7 +13,7 @@ export function Projects() {
       aria-labelledby="projects-title"
     >
       <h2 id="projects-title">
-        Stories Behind the Projects
+        Stories Behind the Projects : 
       </h2>
 
       <div className="projects-list">

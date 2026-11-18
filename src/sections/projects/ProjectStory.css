@@ -82,10 +82,9 @@
 .project-story-section h4 {
   margin: 0 0 0.1rem;
   font-size: 1.2rem;
-  color: indigo;
+  color: 600a88;
   font-family: "Arial";
-  letter-spacing: 0.04em;
-  opacity: 0.65;
+  opacity: 0.95;
 }
 
 .project-story-section p {
@@ -105,5 +104,26 @@
 
   .project-story-gallery img {
     height: 360px;
+  }
+}
+
+.portrait {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.portrait img {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.portrait img.active {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait img {
+    transition: none;
   }
 }
