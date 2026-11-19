@@ -1,9 +1,11 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import { gifts } from './data';
 import { GiftBox } from './GiftBox';
 import { GiftContent } from './GiftContent';
 import { giftMessage, selectGift } from './selection';
-import './gifts.css';
+
 
 export function FloatingGift() {
   const [progress, setProgress] = useState<{ openedIds: string[] }>({ openedIds: [] });
@@ -16,7 +18,7 @@ export function FloatingGift() {
   const trigger = useRef<HTMLButtonElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
   const opening = useRef(false);
-  const unwrapTimer = useRef<ReturnType<typeof setTimeout>>();
+  const unwrapTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const opened = gifts.filter((gift) => progress.openedIds.includes(gift.id));
   const remaining = gifts.length - opened.length;
   const activeGift = opened.find((gift) => gift.id === activeId) ?? opened.at(-1);

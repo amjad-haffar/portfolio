@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 export function useVisitNotification() {
   useEffect(() => {
-    if (!import.meta.env.PROD) return;
+    if (process.env.NODE_ENV !== 'production') return;
 
     if (sessionStorage.getItem('visit-notified')) return;
 

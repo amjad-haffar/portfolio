@@ -1,21 +1,19 @@
-import { Link, NavLink } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { profile } from '../content';
 
-const navigation = [
-  ['Projects', '/#projects'],
-  ['Skills', '/#skills'],
-  ['Education', '/#education'],
-  ['Contact', '/#contact'],
-];
-
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header className="site-header" id="top" tabIndex={-1}>
       <div className="wrap header-inner">
-        <Link className="brand" to="/">{profile.name}</Link>
+        <Link className="brand" href="/">{profile.name}</Link>
         <nav aria-label="Main navigation">
-          <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/lately">Life Lately</NavLink>
+          <Link href="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</Link>
+          <Link href="/lately" aria-current={pathname === '/lately' ? 'page' : undefined}>Life Lately</Link>
         </nav>
       </div>
     </header>

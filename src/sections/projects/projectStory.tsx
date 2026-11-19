@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { ProjectGallery } from './ProjectGallery';
 import type { Project } from './data';
 import { Tags } from '../../components/Tags'
 
@@ -8,23 +8,6 @@ import { Tags } from '../../components/Tags'
 // };
 
 export function ProjectStory({ project }: { project: Project }) {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const screenshots = project.screenshots;
-  const hasScreenshots = screenshots.length > 0;
-
-  function previousSlide() {
-    setActiveSlide((current) =>
-      (current - 1 + screenshots.length) % screenshots.length
-    );
-  }
-
-  function nextSlide() {
-    setActiveSlide((current) =>
-      (current + 1) % screenshots.length
-    );
-  }
-
   return (
     <article id={project.id} tabIndex={-1} className={`project-story ${project.screenshotLayout ?? 'mobile'}`}>
       <header className="project-story-header">
@@ -35,38 +18,7 @@ export function ProjectStory({ project }: { project: Project }) {
       </header>
 
       <div className="project-story-content">
-        {hasScreenshots && (
-          <div className="project-story-gallery">
-            <img
-              src={screenshots[activeSlide]}
-              alt={`${project.name} screenshot ${activeSlide + 1}`}
-            />
-
-            {screenshots.length > 1 && (
-              <div className="project-story-controls">
-                <button
-                  type="button"
-                  onClick={previousSlide}
-                  aria-label="Previous screenshot"
-                >
-                  ←
-                </button>
-
-                <span aria-live="polite">
-                  {activeSlide + 1} / {screenshots.length}
-                </span>
-
-                <button
-                  type="button"
-                  onClick={nextSlide}
-                  aria-label="Next screenshot"
-                >
-                  →
-                </button>
-              </div>
-            )}
-          </div>
-        )}
+        <ProjectGallery name={project.name} screenshots={project.screenshots} />
 
         <div className="project-story-details">
           {project.sections.map((section) => (
