@@ -8,7 +8,10 @@ export function Contact() {
         <p>Want to have a chat? I’d love to hear from you.</p>
       </div>
       <div className="contact-links">
-        {profile.links.map(({ label, url }) => <a key={label} href={url}>{label} <span aria-hidden="true">↗</span></a>)}
+        {profile.links.map(({ label, url }) => <a 
+    target="_blank" 
+    rel="noopener noreferrer"
+    key={label} href={url}>{label} <span aria-hidden="true">↗</span></a>)}
       </div>
     </section>
   );

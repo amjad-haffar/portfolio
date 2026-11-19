@@ -12,7 +12,7 @@ export function SiteHeader() {
   return (
     <header className="site-header" id="top" tabIndex={-1}>
       <div className="wrap header-inner">
-        <Link className="brand" to="/"><span className="monogram">{profile.initials}</span>{profile.name}</Link>
+        <Link className="brand" to="/">{profile.name}</Link>
         <nav aria-label="Main navigation">
           <NavLink to="/" end>Home</NavLink>
           <NavLink to="/lately">Life Lately</NavLink>
