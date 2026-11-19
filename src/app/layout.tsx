@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     default: 'Amjad Alhaffar | Software Engineer',
     template: '%s | Amjad Alhaffar',
   },
+  verification: {
+    google: 'gOuymbFLyGqQ34zKxbPcvRtatDGgBvDi4Cc3oe0ZagI',
+  },
   description: 'Amjad Alhaffar, Software Engineer with an MSc in Artificial Intelligence and a background in mobile development, software engineering and design.',
   robots: { index: true, follow: true },
 };

@@ -25,7 +25,7 @@ export const lately = {
       {
   id: 'repeat',
   title: 'Cant stop listenting to',
-  text: 'convincing my self if i listen to this song everyday, I might get lucky? 😎',
+  text: 'convincing my self if I listen to this song everyday, I might get lucky? 😎',
   music: {
     provider: 'youtube',
     id: '5NV6Rdv1a3I',
