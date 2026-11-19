@@ -25,7 +25,10 @@ p { line-height: 1.65; }
 .monogram { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: #e9e4ff; color: #7b2bb0; font-size: .82rem; }
 nav { display: flex; gap: clamp(12px, 2.5vw, 32px); flex-wrap: wrap; font-size: .9rem; color: var(--muted); }
 nav a { padding-block: 8px; }
-.hero { padding-block: 88px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, 32%); align-items: center; gap: clamp(28px, 6vw, 82px); }
+.hero { padding-block: 88px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, 32%); align-items: center; gap: clamp(28px, 6vw, 82px);  position: relative;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate; }
 .eyebrow { color: var(--accent); font-weight: 750; letter-spacing: .12em; font-size: .77rem; text-transform: uppercase; margin-bottom: 18px; }
 h1 { font-size: clamp(2.9rem, 6.1vw, 5.4rem); line-height: 1.04; letter-spacing: -.035em; max-width: 14ch; text-wrap: balance;color: #600a88 }
 .intro { margin-top: 24px; max-width: 46ch; color: var(--muted); font-size: 1.08rem; }
@@ -200,6 +203,7 @@ button:focus-visible { outline: 3px solid #ba5ef0; outline-offset: 4px; }
 .home-intro .portrait { background: #8544a2; color: var(--ink); }
 .home-education > .wrap,
 .home-contact > .wrap { border-top: 1px solid #ffffff24; }
+/* music player style*/
 .music-player {
   grid-column: 2;
   justify-self: center;
@@ -218,6 +222,7 @@ button:focus-visible { outline: 3px solid #ba5ef0; outline-offset: 4px; }
   height: auto;
   text-align: center;
 }
+/* latlely note page style */
 .lately-note h2 {
   align-self: center;
   text-align: center;
@@ -291,4 +296,47 @@ button:focus-visible { outline: 3px solid #ba5ef0; outline-offset: 4px; }
 
   font-family: 'Caveat', cursive;
   line-height: 1.8;
+}
+
+/* hero animation */
+.hero {
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+}
+.home-intro {
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+.hero-background span {
+  position: absolute;
+  color: #faf8fc;
+  white-space: nowrap;
+  opacity: 0.35;
+  animation: symbol-stream 20s linear infinite;
+}
+
+@keyframes symbol-stream {
+  from {
+    transform: translate(0, 0) rotate(-15deg);
+  }
+
+  to {
+    transform: translate(40px, -120vh) rotate(15deg);
+  }
+}
+.wrap {
+  width: min(1100px, calc(100% - 72px));
+  margin-inline: auto;
 }

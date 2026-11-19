@@ -4,9 +4,13 @@ import { Education } from '../sections/Education';
 import { Projects } from '../sections/projects/Projects';
 import { Contact } from '../sections/Contact';
 
+import HeroBackground from '../components/HeroBackground';
 export default function Home() {
   return (
     <>
+      <div className='home-intro'>
+        <HeroBackground />
+      </div>
       <div className="home-intro"><div className="wrap"><Hero /></div></div>
       <Projects />
       <div className="home-skills"><div className="wrap"><Skills /></div></div>
