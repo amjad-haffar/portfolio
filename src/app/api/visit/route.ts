@@ -65,6 +65,8 @@ export async function POST(req: Request) {
     return new Response(null, { status: 400 });
   }
   let message: string;
+  const country = req.headers.get('x-vercel-ip-country') ?? 'Unknown';
+  const city = req.headers.get('x-vercel-ip-city') ?? 'Unknown';
 
   switch (body.event) {
     case 'visit': {
@@ -82,6 +84,7 @@ export async function POST(req: Request) {
         '',
         `Source: ${source}`,
         `Device: ${device}`,
+        `location: ${country}, ${city}`,
         `OS: ${os}`,
         `Browser: ${browser}`,
       ].join('\n');
