@@ -41,9 +41,10 @@
 .gift-box.is-unwrapping .gift-lid { animation: gift-unwrap .5s ease-in both; }
 .gift-intro {
   position: absolute;
-  bottom: 76px;
-  left: 0;
-  width: min(260px, calc(100vw - 2rem));
+  bottom: 0;
+  left: calc(100% + 12px);
+  width: 260px;
+  max-width: calc(100vw - 110px);
   display: flex;
   align-items: start;
   gap: .75rem;

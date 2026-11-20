@@ -30,7 +30,7 @@ export const gifts: Gift[] = [
   {
     id: 'daily-universe',
     title: 'Look beyond your screen',
-    text: 'NASA shares a different picture of the universe every day. The internet can still be a beautiful place if you know where to look.',
+    text: 'NASA shares a different picture of the universe every day. see this one',
     link: {
       url: 'https://apod.nasa.gov/',
       label: 'A little piece of the universe',

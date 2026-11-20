@@ -86,14 +86,13 @@ export function FloatingGift() {
       }}>
       {!introDismissed && !expanded && (
         <div className="gift-intro">
-          <p>Psst... I have a little something for you.</p>
+          <p>Psst... I have something for you.👀</p>
           <button type="button" onClick={dismissIntro} aria-label="Dismiss gift introduction">×</button>
         </div>
       )}
       {expanded && (
         <section className="gift-panel" id="gift-panel" aria-labelledby="gift-heading">
           <header className="gift-panel-header">
-            <span role="status">{unwrapping ? 'Unwrapping a little surprise…' : giftMessage(opened.length, remaining)}</span>
             <button type="button" onClick={minimise} aria-label="Minimise gifts">−</button>
           </header>
           <h2 id="gift-heading" ref={heading} tabIndex={-1}>
@@ -110,9 +109,12 @@ export function FloatingGift() {
             </ul>
           ) : activeGift && <GiftContent gift={activeGift} />}
           <div className="gift-actions">
+            
+            <span role="status">{unwrapping ? 'Unwrapping a little surprise…' : giftMessage(opened.length, remaining)}</span>
             {remaining > 0 && (
-              <button type="button" className="gift-more" disabled={unwrapping} onClick={unwrap}>Okay, one more</button>
+              <button type="button" className="gift-more" disabled={unwrapping} onClick={unwrap}>One more gift</button>
             )}
+            
             {remaining === 0 && opened.length > 0 && (
               <button type="button" onClick={() => setCollectionOpen(!collectionOpen)}>
                 {collectionOpen ? 'Back to gift' : `Your gifts (${opened.length})`}
